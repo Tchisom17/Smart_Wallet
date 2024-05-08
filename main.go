@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"github.com/joho/godotenv"
 	"github.com/tchisom17/internal/app/handler/accounthand"
 	"log"
@@ -14,6 +13,5 @@ func main() {
 	}
 
 	http.HandleFunc("/create-account", accounthand.HandleCreateAccount)
-	fmt.Println("started")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
